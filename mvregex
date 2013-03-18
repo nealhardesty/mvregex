@@ -30,7 +30,6 @@ if [ -z "$OLDRE" ]; then
 	exit 255
 fi
 
-#find "." -type f \( ! -regex './\..*' \)  -depth 1 -print | while read file ; do
 for file in "$@"; do
 	newfile=`echo "$file" |sed -e "s/$OLDRE/$NEWRE/g"`
 	#echo MV "$file" '->' "$newfile"
