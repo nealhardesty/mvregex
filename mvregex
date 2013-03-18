@@ -32,7 +32,6 @@ fi
 
 for file in "$@"; do
 	newfile=`echo "$file" |sed -e "s/$OLDRE/$NEWRE/g"`
-	#echo MV "$file" '->' "$newfile"
 	if [ ! "$file" = "$newfile" ]; then
 		if [ $SIMULATE ]; then
 			echo SIM "$file" '->' "$newfile"
